@@ -4,7 +4,7 @@ import "semantic-ui-css/semantic.min.css";
 function App() {
   return (
     <div>
-      <p>Creando nuestra aplicacion de Marvel</p>
+      <h1>Creando nuestra aplicacion de Marvel</h1>
       <div class="ui animated button" tabindex="0">
         <div class="visible content">Next</div>
         <div class="hidden content">
