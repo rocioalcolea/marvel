@@ -1,16 +1,23 @@
 import "./App.css";
 import "semantic-ui-css/semantic.min.css";
+import Home from "./pages/Home";
+import Comics from "./pages/Comics";
+import Series from "./pages/Series";
+import Error404 from "./pages/Error404";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <div>
-      <h1>Creando nuestra aplicacion de Marvel</h1>
-      <div class="ui animated button" tabindex="0">
-        <div class="visible content">Next</div>
-        <div class="hidden content">
-          <i class="right arrow icon"></i>
-        </div>
-      </div>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/inicio" element={<Home />} />
+          <Route path="/series" element={<Series />} />
+          <Route path="/comics" element={<Comics />} />
+          <Route path="*" element={<Error404 />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
