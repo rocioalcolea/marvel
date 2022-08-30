@@ -1,11 +1,18 @@
 import { Menu } from "semantic-ui-react";
 import "./Header.scss";
 import { useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 export default function Header() {
-  const [activeItem, setActiveItem] = useState("");
+  const currentPath = useLocation();
+  const finalCurrentPath = currentPath.pathname.replace("/", "");
+
+  const [activeItem, setActiveItem] = useState(finalCurrentPath);
+  const navigate = useNavigate();
+
   const handleItemClick = (e, { name }) => {
     setActiveItem(name);
+    navigate("/" + name);
   };
   return (
     <div className="header-menu">

@@ -4,12 +4,14 @@ import Home from "./pages/Home";
 import Comics from "./pages/Comics";
 import Series from "./pages/Series";
 import Error404 from "./pages/Error404";
+import Header from "./components/Header";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <div>
       <Router>
+        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/inicio" element={<Home />} />
