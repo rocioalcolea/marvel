@@ -1,7 +1,9 @@
+import BestCharacter from "../components/BestCharacter";
+
 export default function Home() {
   return (
     <div>
-      <p>Estamos dentro de la Home</p>
+      <BestCharacter />
     </div>
   );
 }
